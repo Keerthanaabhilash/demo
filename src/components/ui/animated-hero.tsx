@@ -31,9 +31,9 @@ function Hero() {
   return (
     <div className="w-full">
       <div className="container mx-auto">
-        <div className="flex gap-8 py-8 sm:py-14 lg:py-28 items-start justify-center flex-col">
-          <div data-hero-glow-target className="flex gap-4 flex-col">
-            <h1 className="text-2xl sm:text-4xl md:text-6xl xl:text-7xl max-w-3xl tracking-tighter text-left font-regular text-foreground">
+        <div className="flex gap-4 sm:gap-6 lg:gap-8 py-6 sm:py-10 md:py-14 lg:py-28 items-start justify-center flex-col">
+          <div data-hero-glow-target className="flex gap-3 sm:gap-4 flex-col">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl max-w-3xl tracking-tighter text-left font-regular text-foreground">
               <span className="relative inline-block" style={{ color: heroAccentColor }}>
                 Empowering Teens to
                 <span aria-hidden="true" className="pointer-events-none absolute inset-0" style={localizedGlowStyle}>
@@ -69,7 +69,7 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="relative text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-left">
+            <p className="relative text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-left">
               Discover your Ikigai - the intersection where your passion, mission, vocation, and profession align to create a life of meaning and fulfillment.
               <span aria-hidden="true" className="pointer-events-none absolute inset-0" style={localizedGlowStyle}>
                 Discover your Ikigai - the intersection where your passion, mission, vocation, and profession align to create a life of meaning and fulfillment.

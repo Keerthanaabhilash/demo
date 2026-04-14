@@ -406,7 +406,7 @@ const FAQSection = () => {
   const headingColor = useTransform(scrollYProgress, [0, 0.45], ["hsl(195 10% 70%)", "hsl(var(--foreground))"]);
 
   return (
-    <section ref={ref} className="py-12 md:py-20 bg-card border-t border-b border-border/50">
+    <section ref={ref} className="py-8 md:py-12 lg:py-20 bg-card border-t border-b border-border/50">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           className="max-w-5xl mx-auto"
@@ -415,15 +415,15 @@ const FAQSection = () => {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="rounded-2xl border border-border/60 bg-[hsl(195_25%_96%_/_0.8)] p-4 md:p-6">
-            <div className="text-center mb-8">
+          <div className="rounded-2xl border border-border/60 bg-[hsl(195_25%_96%_/_0.8)] p-3 sm:p-4 md:p-6">
+            <div className="text-center mb-6 md:mb-8">
               <motion.h2 style={{ color: headingColor }}>
                 <LetterSwapForward
                   label="Frequently Asked Questions"
-                  className="justify-center text-3xl md:text-4xl font-display font-bold text-current mb-3"
+                  className="justify-center text-2xl sm:text-3xl md:text-4xl font-display font-bold text-current mb-2 md:mb-3"
                 />
               </motion.h2>
-              <p className="text-lg md:text-xl font-display text-primary">
+              <p className="text-base md:text-lg lg:text-xl font-display text-primary">
                 Ikigai Teen is real, safe, intelligent, and trustworthy.
               </p>
             </div>
@@ -441,22 +441,22 @@ const FAQSection = () => {
 
                     setOpenFaq(undefined);
                   }}
-                  className="border-border/60 group px-4 data-[state=open]:bg-[hsl(195_25%_96%_/_0.8)] data-[state=open]:rounded-xl transition-all duration-300"
+                  className="border-border/60 group px-2 md:px-4 data-[state=open]:bg-[hsl(195_25%_96%_/_0.8)] data-[state=open]:rounded-xl transition-all duration-300"
                 >
-                  <AccordionTrigger data-faq-trigger="true" className="text-left text-base md:text-lg font-display font-semibold text-foreground hover:text-[hsl(152_55%_38%)] hover:drop-shadow-[0_0_12px_hsl(152_55%_38%_/_0.45)] data-[state=open]:text-foreground hover:no-underline transition-all duration-300">
+                  <AccordionTrigger data-faq-trigger="true" className="text-left text-sm md:text-base lg:text-lg font-display font-semibold text-foreground hover:text-[hsl(152_55%_38%)] hover:drop-shadow-[0_0_12px_hsl(152_55%_38%_/_0.45)] data-[state=open]:text-foreground hover:no-underline transition-all duration-300">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-primary font-body">
-                    <div className="space-y-4 pt-1">
+                    <div className="space-y-2 md:space-y-3 lg:space-y-4 pt-1">
                       {item.intro?.map((paragraph) => (
-                        <p key={paragraph} className="text-sm md:text-base leading-relaxed text-primary">
+                        <p key={paragraph} className="text-xs md:text-sm lg:text-base leading-relaxed text-primary">
                           {renderNumberText(paragraph)}
                         </p>
                       ))}
 
-                      <ol className="space-y-3">
+                      <ol className="space-y-2 md:space-y-2.5">
                         {item.points.map((point, pointIndex) => (
-                          <li key={point.title} className="text-sm md:text-base leading-relaxed">
+                          <li key={point.title} className="text-xs md:text-sm lg:text-base leading-relaxed">
                             <span className="font-semibold text-primary">
                               {pointIndex + 1}. {renderNumberText(point.title)}
                             </span>
@@ -466,7 +466,7 @@ const FAQSection = () => {
                       </ol>
 
                       {item.closing?.map((paragraph) => (
-                        <p key={paragraph} className="text-sm md:text-base leading-relaxed italic text-primary">
+                        <p key={paragraph} className="text-xs md:text-sm lg:text-base leading-relaxed italic text-primary">
                           {renderNumberText(paragraph)}
                         </p>
                       ))}

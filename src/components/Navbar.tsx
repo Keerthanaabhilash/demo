@@ -252,7 +252,7 @@ const Navbar = () => {
     <nav className={`navbar-theme-legacy fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-500 ${navbarThemeClass}`}>
       <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-3">
-          <div className="h-12 w-12 sm:h-16 sm:w-16 lg:h-[6.75rem] lg:w-[6.75rem] shrink-0 overflow-hidden rounded-lg">
+          <div className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-[6.75rem] xl:w-[6.75rem] shrink-0 overflow-hidden rounded-lg">
             <img
               src={logo}
               alt="Ikigai Teen"
@@ -352,7 +352,7 @@ const Navbar = () => {
                   </AnimatePresence>
                 </div>
               ))}
-              <Link to="/#contact" className="block mt-4 text-center px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold font-body" onClick={() => setMobileOpen(false)}>
+              <Link to="/#contact" className="block mt-4 px-5 py-2 text-center bg-primary text-primary-foreground rounded-full text-sm font-semibold font-body"onClick={() => setMobileOpen(false)}>
                 <LetterSwapPingPong label="Contact Us" className="justify-center" />
               </Link>
             </div>

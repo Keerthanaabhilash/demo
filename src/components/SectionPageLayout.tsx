@@ -37,13 +37,13 @@ const SectionPageLayout = ({ title, subtitle, sections }: SectionPageLayoutProps
       <Navbar />
       <main className="pt-16 bg-background min-h-screen">
         {/* Page Header */}
-        <section className="footer-theme-legacy py-12 md:py-20 bg-card border-b border-border/50 overflow-hidden">
+        <section className="footer-theme-legacy py-8 md:py-12 lg:py-20 bg-card border-b border-border/50 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6">
             <motion.div
               className="max-w-3xl mx-auto text-center"
             >
               <motion.h1
-                className="text-4xl md:text-5xl font-display font-bold text-primary mb-4"
+                className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-primary mb-3 md:mb-4"
                 initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
@@ -51,7 +51,7 @@ const SectionPageLayout = ({ title, subtitle, sections }: SectionPageLayoutProps
                 {title}
               </motion.h1>
               <motion.p
-                className="text-lg text-muted-foreground font-body"
+                className="text-base md:text-lg text-muted-foreground font-body"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -63,17 +63,17 @@ const SectionPageLayout = ({ title, subtitle, sections }: SectionPageLayoutProps
         </section>
 
         {/* Subsections */}
-        <section className="py-10 md:py-16 bg-background">
+        <section className="py-8 md:py-12 lg:py-16 bg-background">
           <div className="container mx-auto px-4 sm:px-6">
             <motion.div
-              className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+              className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto"
             >
               {sections.map((s) => (
                 <motion.div key={s.title} variants={cardVariants} id={s.id} className="scroll-mt-24">
                   {s.path ? (
                     <Link to={s.path} className="block">
                       <motion.div
-                        className="rounded-xl border border-border/60 bg-[hsl(195_25%_96%_/_0.8)] [--foreground:195_26%_16%] [--muted-foreground:195_16%_42%] [--border:152_20%_86%] p-5 sm:p-8 group cursor-pointer hover:border-primary/40 transition-colors"
+                        className="rounded-xl border border-border/60 bg-[hsl(195_25%_96%_/_0.8)] [--foreground:195_26%_16%] [--muted-foreground:195_16%_42%] [--border:152_20%_86%] p-4 sm:p-6 md:p-8 group cursor-pointer hover:border-primary/40 transition-colors"
                         whileHover={{
                           y: -6,
                           boxShadow: "0 20px 40px -15px hsl(152 60% 45% / 0.15)",
@@ -106,7 +106,7 @@ const SectionPageLayout = ({ title, subtitle, sections }: SectionPageLayoutProps
                     </Link>
                   ) : (
                     <motion.div
-                      className="rounded-xl border border-border/60 bg-[hsl(195_25%_96%_/_0.8)] [--foreground:195_26%_16%] [--muted-foreground:195_16%_42%] [--border:152_20%_86%] p-5 sm:p-8 group"
+                      className="rounded-xl border border-border/60 bg-[hsl(195_25%_96%_/_0.8)] [--foreground:195_26%_16%] [--muted-foreground:195_16%_42%] [--border:152_20%_86%] p-4 sm:p-6 md:p-8 group"
                       whileHover={{
                         y: -6,
                         boxShadow: "0 20px 40px -15px hsl(152 60% 45% / 0.15)",

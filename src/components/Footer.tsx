@@ -124,12 +124,12 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="footer-theme-legacy bg-card border-t border-border py-12 scroll-mt-20">
+    <footer id="contact" className="footer-theme-legacy bg-card border-t border-border py-8 md:py-12 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
+        <div className="grid gap-6 md:gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 sm:h-[6.75rem] sm:w-[6.75rem] shrink-0 overflow-hidden rounded-lg">
+              <div className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-[6.75rem] xl:w-[6.75rem] shrink-0 overflow-hidden rounded-lg">
                 <img
                   src={logo}
                   alt="Ikigai Teen"
@@ -138,7 +138,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="text-sm text-muted-foreground font-body leading-relaxed">
+            <div className="text-xs md:text-sm text-muted-foreground font-body leading-relaxed">
               <p>Empowering teens to discover purpose.</p>
               <p>Building a meaningful future through identity.</p>
               <p>Growing with guidance, confidence, and community.</p>
@@ -149,7 +149,7 @@ const Footer = () => {
                 <div key={group.label}>
                   <button
                     onClick={() => setOpenDropdown(openDropdown === group.label ? null : group.label)}
-                    className="w-full flex items-center justify-between max-w-xs font-display text-base font-semibold text-foreground hover:text-primary transition-colors"
+                    className="w-full flex items-center justify-between max-w-xs font-display text-sm md:text-base font-semibold text-foreground hover:text-primary transition-colors"
                   >
                     <span>{group.label}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === group.label ? "rotate-180" : ""}`} />
@@ -172,26 +172,26 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="space-y-4 lg:pl-8">
+          <div className="space-y-3 md:space-y-4 lg:pl-8">
             <h3>
-              <LetterSwapForward label="Contact Us" className="justify-start font-display text-lg font-semibold text-foreground" />
+              <LetterSwapForward label="Contact Us" className="justify-start font-display text-base md:text-lg font-semibold text-foreground" />
             </h3>
-            <div className="space-y-2.5 text-sm md:text-base font-body text-foreground/85">
-              <p className="grid grid-cols-[78px_1fr] items-baseline gap-2">
+            <div className="space-y-1.5 md:space-y-2.5 text-xs md:text-sm lg:text-base font-body text-foreground/85">
+              <p className="grid grid-cols-[70px_1fr] md:grid-cols-[78px_1fr] items-baseline gap-2">
                 <span className="text-foreground font-semibold">Email:</span>
-                <span className="text-foreground/80">ikigaiteenhub@gmail.com</span>
+                <span className="text-foreground/80 break-all">ikigaiteenhub@gmail.com</span>
               </p>
-              <p className="grid grid-cols-[78px_1fr] items-baseline gap-2">
+              <p className="grid grid-cols-[70px_1fr] md:grid-cols-[78px_1fr] items-baseline gap-2">
                 <span className="text-foreground font-semibold">Phone:</span>
                 <span className="text-foreground/80">{renderNumberText("+91 89713 91101")}</span>
               </p>
             </div>
-            <TiltedDock className="pt-6 justify-start" items={contactDockItems} />
+            <TiltedDock className="pt-4 md:pt-6 justify-start" items={contactDockItems} />
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border/70 flex items-center justify-center">
-          <p className="text-sm text-muted-foreground font-body text-center">
+        <div className="mt-6 md:mt-10 pt-4 md:pt-6 border-t border-border/70 flex items-center justify-center">
+          <p className="text-xs md:text-sm text-muted-foreground font-body text-center">
             © {renderNumberText(String(new Date().getFullYear()))} Ikigai Teen. All rights reserved.
           </p>
         </div>
