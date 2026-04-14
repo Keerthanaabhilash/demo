@@ -33,16 +33,16 @@ const HeroSection = () => {
       <div className="absolute inset-0 hero-gradient" />
 
       <motion.div
-        className="relative z-10 container mx-auto px-4 sm:px-6 pt-16 sm:pt-20"
+        className="relative z-10 container mx-auto px-4 sm:px-6 pt-20"
         style={{
           y: textY,
           opacity,
         }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px] gap-4 lg:gap-6 xl:gap-8 items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_360px] gap-8 items-start">
           <Hero />
 
-          <aside className="hidden lg:block pt-1 lg:pt-3">
+          <aside className="hidden xl:block pt-3">
             <div className="mb-4">
               <h2>
                 <LetterSwapForward
@@ -73,7 +73,7 @@ const HeroSection = () => {
               </button>
             </div>
 
-            <div className="h-[340px] lg:h-[380px] xl:h-[446px]">
+            <div className="h-[446px]">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={contentTab}

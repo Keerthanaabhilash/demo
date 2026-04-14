@@ -38,10 +38,10 @@ const FeaturesSection = () => {
   const headingColor = useTransform(scrollYProgress, [0, 0.45], ["hsl(195 10% 70%)", "hsl(var(--foreground))"]);
 
   return (
-    <section ref={ref} className="py-8 md:py-12 lg:py-20 bg-card overflow-hidden">
+    <section ref={ref} className="py-12 md:py-20 bg-card overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
-          className="max-w-4xl mx-auto text-center rounded-2xl border border-border/60 bg-[hsl(195_25%_96%_/_0.8)] p-4 sm:p-6 md:p-8 lg:p-10"
+          className="max-w-4xl mx-auto text-center rounded-2xl border border-border/60 bg-[hsl(195_25%_96%_/_0.8)] p-5 sm:p-8 md:p-10"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -50,11 +50,11 @@ const FeaturesSection = () => {
           <motion.h2 style={{ color: headingColor }}>
             <LetterSwapForward
               label="Origin Of Ikigai Teen"
-              className="justify-center text-2xl sm:text-3xl md:text-4xl font-display font-bold text-current mb-2 md:mb-3"
+              className="justify-center text-3xl md:text-4xl font-display font-bold text-current mb-3"
             />
           </motion.h2>
-          <p className="text-base md:text-lg lg:text-xl font-display text-primary mb-4 md:mb-6">From Humanitarian Field Work to a Teen Mindset Movement</p>
-          <div className="space-y-3 md:space-y-4 text-xs md:text-sm lg:text-base text-muted-foreground font-body leading-relaxed text-left md:text-center">
+          <p className="text-lg md:text-xl font-display text-primary mb-6">From Humanitarian Field Work to a Teen Mindset Movement</p>
+          <div className="space-y-4 text-sm md:text-base text-muted-foreground font-body leading-relaxed text-left md:text-center">
             <p>
               After two decades of working with children through humanitarian programs, education initiatives, and youth
               development projects across India, Irene Arathi has reached over {renderNumberText("107,893")} children through life-skills
